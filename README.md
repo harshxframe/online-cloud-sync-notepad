@@ -60,17 +60,7 @@ NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
 
 > **Note:** In your Firebase Console, make sure to enable:
 > 1. **Authentication** → Sign-in method → **Email/Password**
-> 2. **Firestore Database** → Rules → Set to:
-> ```javascript
-> rules_version = '2';
-> service cloud.firestore {
->   match /databases/{database}/documents {
->     match /{document=**} {
->       allow read, write: if request.auth != null;
->     }
->   }
-> }
-> ```
+> 2. **Firestore Database**
 
 ### 4. Run development server
 ```bash
